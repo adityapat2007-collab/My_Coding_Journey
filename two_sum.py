@@ -2,6 +2,21 @@
 #brute: two for loops, TC: O(n**2)
 
 #optimal (slightly than hash maps): two pointers
+arr = [2,6,5,8,11]
+i, j = 0, len(arr)-1
+book = {}
+for x in range(len(arr)):
+    book[arr[x]] = x
+target = int(input())
+arr.sort() #[2,5,6,8,11]
+while i < j:
+    if arr[i] + arr[j] == target:
+        print([book[arr[i]], book[arr[j]]])
+        break
+    elif arr[i] + arr[j] < target:
+        i+=1
+    else:
+        j-=1
 
 
 
