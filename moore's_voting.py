@@ -14,12 +14,13 @@ for i in range(1, len(arr)):
         count-=1
     if count == 0:
         maj = arr[i]
+        count = 1
 # now, the element stored in 'maj' may or may not be the majority element, so verify:
-count = 1
+count2 = 1
 for i in range(1, len(arr)):
     if arr[i] == maj:
-        count+=1
-if count > len(arr)/2:
+        count2+=1
+if count2 > len(arr)/2:
     print(maj)
 else:
     print("No majority element")
